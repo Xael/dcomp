@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor PER/DCOMP Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        
+        @media print {
+            @page {
+                size: landscape;
+                margin: 0.5cm;
+            }
+            
+            /* Forçar cores de fundo e ajustes de impressão */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+
+            .no-print, .no-print * { 
+                display: none !important; 
+                height: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            body { 
+                background-color: white !important; 
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            #root {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+
+            .print-content { 
+                display: block !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Garantir que a tabela ocupe o espaço e não quebre de forma feia */
+            table { 
+                width: 100% !important; 
+                border-collapse: collapse !important; 
+                font-size: 7pt !important;
+                table-layout: fixed !important;
+                border: 1px solid #e2e8f0 !important;
+            }
+            
+            th { 
+                background-color: #065f46 !important; 
+                color: white !important; 
+                padding: 6px !important;
+                border: 1px solid #064e3b !important;
+            }
+            
+            td { 
+                padding: 4px !important;
+                border-bottom: 1px solid #e2e8f0 !important;
+                word-wrap: break-word;
+            }
+
+            tr:nth-child(even) { 
+                background-color: #f8fafc !important; 
+            }
+
+            .card { 
+                border: 1px solid #e2e8f0 !important; 
+                box-shadow: none !important; 
+                break-inside: avoid;
+                margin-bottom: 10px !important;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "xlsx": "https://esm.sh/xlsx@0.18.5",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+</body>
+</html>

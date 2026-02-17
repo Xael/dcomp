@@ -1,0 +1,5 @@
+{
+  "name": "Gestor PER/DCOMP XLSX Pro",
+  "description": "Sistema para controle e gestão de pedidos de PER/DCOMP com importação direta de planilhas Excel, relatórios PDF e backup.",
+  "requestFramePermissions": []
+}
